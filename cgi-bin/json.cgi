@@ -1,7 +1,7 @@
 #!/bin/sh
 echo $QUERY_STRING > /tmp/query_string
 VERSION=0.0.3
-RELAY_CTRL=/sys/class/leds/tp-link:blue:relay/brightness
+RELAY_CTRL=/sys/class/leds/i-konke:red:relay/brightness
 IP_ADDRESS=`ifconfig wlan0 | sed ':a;N;$!ba;s/\n/","/g' | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -n 1`
 TZ=`cat /etc/TZ`
 SSID=`iw dev wlan0 link | grep SSID | awk '{ print $2 }'`
